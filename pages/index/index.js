@@ -9,7 +9,7 @@ Page({
   data: {
     motto: '欢迎来看直播',
     userInfo: {},
-    tapme: ""
+    city: ''
   },
 
   // 可选参数2：页面加载
@@ -17,7 +17,6 @@ Page({
     var that = this
     //调用应用实例的方法获取全局数据
     app.getUserInfo(userInfo => {
-      console.log(userInfo);
       //更新数据
       that.setData({
         userInfo:userInfo
@@ -63,8 +62,11 @@ Page({
     })
   },
 
-  showCity: () => {
-    
+  showCity: function() {
+    let that = this;
+    this.setData({
+      city: that.data.userInfo.city
+    });
   }
 
 });

@@ -4,9 +4,11 @@
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
-  <view bindtap="showCity" class="city">
+  <view bindtap="showCity" class="marginTop20">
     <text>点击查看城市</text>
-    <text class="hiden">{{userInfo.city}}</text>
+  </view>
+  <view class="marginTop20">
+    <text>{{city}}</text>
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
